@@ -1,0 +1,120 @@
+*{box-sizing:border-box}body{margin:0;background:#f5f7f5;color:#18333d;font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}header{background:linear-gradient(135deg,#103c4a,#2b7d81);color:white;padding:22px 20px 30px}.top{display:flex;justify-content:space-between;gap:10px;font-size:12px;opacity:.92}.top span:last-child{text-align:right}h1{font-size:clamp(28px,6vw,44px);line-height:1.12;margin:25px 0 12px}header p{margin:0;opacity:.9}nav{display:flex;overflow:auto;background:white;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px #1234}nav button{border:0;background:none;padding:16px 12px;flex:1;white-space:nowrap;font-weight:650;color:#456}nav button.active{color:#006b72;border-bottom:3px solid #008c8c}main{max-width:800px;margin:auto;padding:18px 16px 50px}.tab{display:none}.tab.active{display:block}.toolbar{display:flex;gap:10px;align-items:center;margin:0 0 16px}.toolbar label{font-weight:700}.toolbar select{min-width:0;flex:1;padding:12px;border:1px solid #c9d7d6;border-radius:12px;background:white;color:#234}article,.tip,.flight{background:white;border-radius:18px;box-shadow:0 3px 15px #1231;margin:12px 0 20px;overflow:hidden}.hero{width:100%;height:220px;object-fit:cover;display:block}.inner{padding:18px}.date{color:#087c80;font-weight:750;font-size:14px}h2{line-height:1.22;margin:8px 0 14px;font-size:25px}h3{margin:0 0 8px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.chip{background:#e8f3f1;border-radius:999px;padding:7px 11px;font-size:13px;font-weight:700}.detail{padding:13px 0;border-top:1px solid #e5ecea}.detail strong{display:block;margin-bottom:4px}.detail p{margin:0}.muted{color:#66777c;font-size:13px}.warn{background:#fff4e5;padding:14px;border-left:4px solid #dd9b43;border-radius:8px}.weather{background:#eef7fa;padding:14px;border-radius:12px;margin-top:15px}.weather small{color:#65787b}.tip,.flight{padding:18px}.portrait{width:100%;max-height:520px;object-fit:cover;object-position:center 37%;border-radius:18px}.lead{font-size:19px;font-weight:650}blockquote{border-left:4px solid #1a9290;margin:24px 0;padding:8px 18px;font-size:20px;font-style:italic}footer{text-align:center;padding:18px;color:#67787b;font-size:12px}a{color:#087c80}@media(min-width:700px){header{padding-left:max(30px,calc((100vw - 800px)/2))}.hero{height:300px}}
+.route-map{width:100%;height:auto;max-height:560px;object-fit:contain;border-radius:12px;background:#eaf3f4;margin-top:10px}.map-caption{font-size:.84rem;color:#556b70}
+
+/* Magazin stílusú, reszponzív napi oldalak – a meglévő funkciók megtartásával */
+:root{--deep:#103b42;--teal:#176c70;--sand:#f6f1e7;--gold:#d8a95c}
+body{background:var(--sand);color:#20383b}
+header{background:linear-gradient(115deg,rgba(10,49,55,.92),rgba(22,98,103,.84)),linear-gradient(150deg,#164c55,#8bb7ad);padding-top:28px;padding-bottom:34px}
+header h1{font-family:Georgia,serif;font-size:clamp(32px,5vw,52px);letter-spacing:-.03em}
+header .top{letter-spacing:.06em;text-transform:uppercase}
+nav{background:#123f46}
+nav button{color:#e2eeee;cursor:pointer}
+nav button.active{color:#fff;background:#1b6d72;border-bottom:3px solid var(--gold)}
+main{max-width:1060px}
+.toolbar{background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 6px 22px #153d3d12}
+.toolbar select{border-color:#d5e1dc}
+article{border-radius:20px;box-shadow:0 12px 40px #14383c1b}
+.day-hero{position:relative;overflow:hidden;background:#27575a}
+.day-hero .hero{height:clamp(250px,37vw,430px);object-fit:cover}
+.hero-shade{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,4vw,40px);background:linear-gradient(0deg,rgba(6,33,39,.83),transparent 72%);color:white}
+.hero-kicker{font-size:11px;letter-spacing:.22em;font-weight:750}
+.hero-title{font:700 clamp(28px,4vw,46px)/1.15 Georgia,serif;margin-top:8px}
+.hero-title span{font-size:.68em;font-family:system-ui,sans-serif;font-weight:500}
+.inner{padding:clamp(18px,3vw,38px)}
+.day-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}
+.day-heading h2{font:700 clamp(25px,3vw,35px)/1.2 Georgia,serif;color:#173d43;margin:6px 0}
+.day-number{border:1px solid #d5dfd9;border-radius:12px;padding:10px;color:#718381;font-weight:800;white-space:nowrap}
+.overview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0 22px}
+.info-tile{border-radius:14px;background:#edf5f1;padding:16px;min-width:0}
+.tile-label{display:block;color:#397879;font-size:11px;letter-spacing:.09em;font-weight:800;margin-bottom:6px}
+.info-tile>strong{font-size:17px}
+.info-tile .weather{padding:0;margin:0;background:none;font-size:14px}
+.info-tile .weather strong{font-size:15px}
+.section-card{padding:22px;margin:14px 0;border:1px solid #e4eae5;border-radius:16px;background:white}
+.section-card h3{font:700 23px Georgia,serif;color:#14555a;margin:0 0 12px}
+.section-card p{margin:5px 0;white-space:pre-line}
+.day-note{margin-top:16px;border-left:4px solid var(--gold);background:#fbf6eb;padding:13px 15px;border-radius:6px}
+.hotel-card{background:#e9f2ed}
+.hotel-card>strong{font-size:18px}
+.day-actions{display:flex;justify-content:space-between;gap:12px;margin:22px 0}
+.day-actions button{border:0;border-radius:12px;background:#176b70;color:white;padding:13px 20px;font-weight:750;cursor:pointer}
+.day-actions button:disabled{opacity:.35;cursor:default}
+.photo-link{font-size:13px;color:#718381}
+#guide,#tips,#flights{max-width:900px;margin:auto}
+#guide{background:white;border-radius:18px;padding:clamp(18px,3vw,32px);box-shadow:0 4px 20px #1231}
+@media(min-width:1100px){nav{position:fixed;top:0;bottom:0;left:0;width:160px;display:flex;flex-direction:column;padding-top:90px;justify-content:flex-start;gap:10px;box-shadow:none}nav button{flex:0;text-align:left;padding:16px}header,main,footer{margin-left:160px}main{max-width:1080px}header{padding-left:max(30px,calc((100vw - 1100px)/2))}}
+@media(max-width:550px){.overview-grid{grid-template-columns:1fr}.hero-title span{display:block;margin-top:4px}.day-heading{align-items:flex-start}.day-number{font-size:12px;padding:8px}.section-card{padding:16px}.section-card h3{font-size:21px}.day-actions button{padding:12px}}
+
+/* 21 napos magazin felület, harmadik változat */
+:root{--ink:#073d45;--cyan:#22a9ab;--warm:#faf8f3}
+body{background:#e9efec}
+header{background:linear-gradient(90deg,rgba(0,51,58,.96),rgba(0,76,80,.78)),linear-gradient(120deg,#0b525b,#d7b16a);border-bottom:5px solid #d8b474;min-height:170px}
+header h1{font-style:italic;text-shadow:0 2px 8px #002b2c50}
+header h1 em{color:#e3bb74}
+header p{font-size:14px;letter-spacing:.08em}
+.brand{color:white;font:italic 22px/1.2 Georgia,serif;padding:20px 14px 18px;border-bottom:1px solid #ffffff33}
+.brand small{display:block;font:700 10px system-ui;letter-spacing:.22em;margin-top:9px;color:#b6dfdc}
+.day-topbar{display:flex;justify-content:space-between;align-items:center;background:#f9f8f3;padding:14px 25px;font-weight:800;color:#0e5960}
+.day-hero .hero{height:clamp(270px,36vw,460px)}
+.hero-shade{background:linear-gradient(0deg,#032e3bcb,transparent 76%)}
+.hero-title{max-width:95%;text-shadow:0 3px 10px #001d29}
+.hero-title span{font-size:.65em}
+.overview-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.info-tile{background:linear-gradient(140deg,#e5f3ef,#f8faf8);border:1px solid #d9e8e3;box-shadow:0 2px 8px #0e43430a}
+.section-card{box-shadow:0 3px 12px #0b4a4a0d}
+.section-card h3{color:#075960}
+.day-actions button{background:linear-gradient(120deg,#07525a,#0b8c90);box-shadow:0 4px 12px #0a66663b}
+@media(min-width:900px){.inner{display:grid;grid-template-columns:1fr 1fr;column-gap:18px}.day-heading,.overview-grid,.day-actions,.photo-link{grid-column:1/-1}.section-card{margin:8px 0}.section-card:has(.route-map){grid-column:1/-1}}
+@media(min-width:1100px){nav{width:210px;padding-top:0;background:linear-gradient(170deg,#073e49,#02535a)}header,main,footer{margin-left:210px}nav button{font-size:14px;padding:16px 15px}main{max-width:1200px}.brand{display:block}}
+@media(max-width:1099px){.brand{display:none}}
+@media(max-width:780px){.overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.overview-grid{grid-template-columns:1fr}.day-topbar{padding:12px 16px;font-size:12px}.hero-title{font-size:29px}.day-hero .hero{height:260px}}
+
+/* 21 napos fotós magazin */
+header{background:linear-gradient(100deg,rgba(5,48,59,.92),rgba(8,69,80,.48)),url("photo09.jpg") center 47%/cover!important;min-height:190px}
+header h1{font-family:Georgia,serif;font-style:italic;text-shadow:0 3px 12px #0029}
+.day-hero .hero{height:clamp(320px,37vw,470px);object-fit:cover}
+.day-hero{border-radius:16px 16px 0 0}
+.hero-shade{background:linear-gradient(0deg,rgba(4,35,42,.85),transparent 65%)}
+.hero-title{font-size:clamp(28px,3.7vw,45px)}
+.section-card{box-shadow:0 5px 16px #17474c12}
+.info-tile{border:1px solid #dcebe7;box-shadow:0 3px 10px #0d3d4010}
+@media(min-width:1100px){nav{background:linear-gradient(#063e48,#075a5b)}}
+
+/* MAGAZIN 2 – háromoszlopos, kártyás napi áttekintés */
+.inner{display:block!important}
+.magazine-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr) minmax(0,1.1fr);gap:14px;align-items:stretch;margin:14px 0 18px}
+.magazine-middle{display:flex;flex-direction:column;gap:14px;min-width:0}
+.magazine-panel{min-width:0;background:#fff;border:1px solid #dce5e3;border-radius:16px;overflow:hidden;box-shadow:0 4px 16px #123f4612;padding:18px}
+.magazine-panel h3{font:700 21px Georgia,serif;color:#0d555d;margin:-18px -18px 16px;padding:16px 18px;background:linear-gradient(110deg,#d9f1ef,#f8faf6);border-bottom:1px solid #d7e8e5}
+.magazine-panel p{white-space:pre-line;line-height:1.65;margin:8px 0;color:#273c40}
+.magazine-panel strong{font-size:17px;color:#153d42}
+.itinerary-panel{display:flex;flex-direction:column}
+.itinerary-panel .route-text{font-size:16px;line-height:1.85}
+.magazine-foot{margin-top:auto;padding-top:24px;color:#2a797c;font-weight:700}
+.summary-panel{flex:1}
+.hotel-panel{background:#f6faf7}
+.map-panel .route-map{display:block;width:100%;height:auto;max-height:350px;object-fit:contain;border-radius:10px;background:#edf4f2}
+.map-caption{font-size:12px!important;color:#647a7d!important}
+.photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}
+.photo-pair img{width:100%;height:130px;object-fit:cover;border-radius:10px}
+.photo-pair img:nth-child(2){object-position:75% center}
+.image-note{font-size:11px!important;color:#718184!important}
+.overview-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1150px){.magazine-layout{grid-template-columns:repeat(2,minmax(0,1fr))}.map-panel{grid-column:1/-1}.map-panel .route-map{max-height:300px}.photo-pair img{height:155px}}
+@media(max-width:700px){.magazine-layout{grid-template-columns:1fr}.map-panel{grid-column:auto}.overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-pair img{height:135px}}
+@media(max-width:480px){.overview-grid{grid-template-columns:1fr}.magazine-panel{padding:15px}.magazine-panel h3{margin:-15px -15px 14px;padding:14px 15px}}
+
+.photo-pair figure{margin:0;min-width:0}.photo-pair figure img{display:block;width:100%;height:150px;object-fit:cover;border-radius:11px}.photo-pair figcaption{font-size:12px;font-weight:700;color:#24676b;margin-top:7px}.magazine-panel{transition:box-shadow .2s ease}.magazine-panel:hover{box-shadow:0 8px 22px #123f4618}@media(max-width:700px){.photo-pair figure img{height:145px}}
+
+/* MAGAZIN 4: valódi földrajzi térképek és külön helyszínfotó-galéria */
+.geographic-map{display:block;width:100%;height:auto;border:1px solid #dce7e4;border-radius:11px;margin:10px 0;background:#e8f3f1}
+.map-panel .sub-map-title{font-size:17px;margin:18px 0 8px;background:#e6f3ef;padding:11px;border-radius:10px}
+.old-map{font-size:13px;color:#185d61;margin-top:12px}.old-map summary{cursor:pointer;font-weight:700}.old-map .route-map{margin-top:10px}
+.magazine-gallery{background:#fff;border:1px solid #dbe7e2;border-radius:18px;padding:18px;margin:16px 0 22px;box-shadow:0 4px 16px #123f4612}
+.magazine-gallery h3{color:#105b61;font:700 23px Georgia,serif;margin:0 0 8px}.magazine-gallery>p{font-size:13px;color:#607a7c}
+.real-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}.real-photo-grid figure{margin:0;min-width:0}.real-photo-grid img{width:100%;height:205px;object-fit:cover;border-radius:11px;display:block}.real-photo-grid figcaption{font-size:12px;line-height:1.4;margin-top:7px;color:#43676b}
+@media(max-width:700px){.real-photo-grid{grid-template-columns:1fr 1fr}.real-photo-grid img{height:145px}}@media(max-width:450px){.real-photo-grid{grid-template-columns:1fr}.real-photo-grid img{height:205px}}
+
+/* MAGAZIN 5 – offline térképek és fotók */
+.geographic-map{width:100%;height:auto;object-fit:contain;border-radius:12px;border:1px solid #dce8e6;background:#e8f2f5;margin:4px 0 18px}.map-panel .sub-map-title{margin-top:14px}.real-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.real-photo-grid figure{margin:0;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #dbe7e5}.real-photo-grid img{display:block;width:100%;height:190px;object-fit:cover}.real-photo-grid figcaption{padding:10px;font-size:13px;color:#31575b;font-weight:650}.magazine-gallery{padding:20px;border-radius:16px;background:#f3f9f7;margin:18px 0}@media(max-width:720px){.real-photo-grid{grid-template-columns:1fr 1fr}.real-photo-grid img{height:150px}}@media(max-width:450px){.real-photo-grid{grid-template-columns:1fr}}
